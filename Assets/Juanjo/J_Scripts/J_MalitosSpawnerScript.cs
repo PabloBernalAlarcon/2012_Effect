@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab; // Prefab del enemigo a spawnear
@@ -8,9 +8,12 @@ public class EnemySpawner : MonoBehaviour
     public float spawnInterval = 3f; // Intervalo de tiempo entre spawns
 
     private float timeSinceLastSpawn;
-
+    public GameObject papi;
+   
+    
     void Start()
     {
+        
         timeSinceLastSpawn = spawnInterval; // Inicia el tiempo para el primer spawn
     }
 
@@ -31,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
         Vector2 spawnPosition = Vector2.Lerp(lineStart, lineEnd, Random.Range(0f, 1f));
 
         // Genera el enemigo en la posición seleccionada
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity,papi.transform);
     }
 
     // Dibujar la línea de spawn en la escena para facilitar el ajuste

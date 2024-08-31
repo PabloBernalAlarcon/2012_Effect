@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class J_EnemyJump : MonoBehaviour
 {
@@ -10,9 +11,18 @@ public class J_EnemyJump : MonoBehaviour
 
     private Rigidbody2D rb; // Referencia al componente Rigidbody2D
     private bool isGrounded; // Indica si el objeto está en el suelo
+    public float lifeSpan;
+
+
+    IEnumerator moristes()
+    {
+        yield return new WaitForSeconds(lifeSpan);
+        Destroy(gameObject);
+    }
 
     void Start()
     {
+        StartCoroutine(moristes());
         rb = GetComponent<Rigidbody2D>(); // Obtener el componente Rigidbody2D
     }
 
