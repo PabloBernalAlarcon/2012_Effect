@@ -13,11 +13,13 @@ public class P_PlayerController : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody component
     private bool isGrounded; // Whether the player is grounded
     private Camera mainCamera; // Reference to the main camera
+    private Animator anim;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         mainCamera = Camera.main; // Get the main camera
     }
 
@@ -31,6 +33,7 @@ public class P_PlayerController : MonoBehaviour
             if (CheckGrounded())
             {
             Jump(); // Execute the jump
+                anim.SetTrigger("jump");
             }
         }
     }
