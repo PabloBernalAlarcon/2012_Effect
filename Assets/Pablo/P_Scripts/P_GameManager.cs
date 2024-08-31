@@ -8,6 +8,13 @@ public class P_GameManager : MonoBehaviour
     [SerializeField]
     P_UIController UIController;
 
+    // Define the delegate type
+    public delegate void PlayerCollisionHandler();
+
+    // Define an event of the delegate type
+    public static event PlayerCollisionHandler OnPlayerEnemyCollision;
+
+   
     // Called when the script instance is being loaded
     private void Awake()
     {
@@ -32,5 +39,12 @@ public class P_GameManager : MonoBehaviour
         UIController.scoreText.text = ((int)playerScore).ToString();
     }
 
+    // This method will be called when a collision is detected
+    public void PlayerCollidedWithEnemy()
+    {
+        // Invoke the event
+        OnPlayerEnemyCollision?.Invoke();
+        Time.timeScale = 0;
+    }
 
 }

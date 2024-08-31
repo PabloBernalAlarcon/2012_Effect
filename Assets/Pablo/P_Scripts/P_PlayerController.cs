@@ -35,6 +35,16 @@ public class P_PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       if(collision.gameObject.tag == "Enemy")
+        {
+            P_GameManager.Instance.PlayerCollidedWithEnemy();
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
     bool CheckGrounded()
     {
         // Perform a raycast from the child GameObject to check for the ground
