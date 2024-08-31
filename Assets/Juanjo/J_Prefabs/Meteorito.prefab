@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5204873306062304671}
   - component: {fileID: 1179716976879268580}
   - component: {fileID: 2102980356196231690}
-  m_Layer: 0
-  m_Name: Circle
-  m_TagString: Floor
+  m_Layer: 6
+  m_Name: Meteorito
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4940,8 +4940,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79f53466a6590a44e8466449cc216085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -5
+  speed: 5
   groundTag: Floor
+  lifeSpan: 5
+  minAngle: 200
+  maxAngle: 340
 --- !u!50 &2102980356196231690
 Rigidbody2D:
   serializedVersion: 4
