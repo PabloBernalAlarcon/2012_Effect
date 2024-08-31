@@ -21,14 +21,17 @@ public class P_PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            if (CheckGrounded())
+            {
             Jump(); // Execute the jump
+            }
         }
     }
 
     bool CheckGrounded()
     {
         // Perform a raycast from the child GameObject to check for the ground
-        isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, groundDistance);
+        isGrounded = Physics2D.Raycast(groundCheck.position, Vector3.down, groundDistance, groundMask);
         Debug.Log(isGrounded);
 
         // Optional: visualize the raycast in the editor
