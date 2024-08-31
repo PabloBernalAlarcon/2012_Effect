@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class P_PlayerController : MonoBehaviour
 {
+ 
+  
     public float jumpForce = 5f; // The force applied when jumping
     public Transform groundCheck; // Reference to the child GameObject used to check if grounded
     public float groundDistance = 0.1f; // Distance to check for ground
@@ -10,9 +12,10 @@ public class P_PlayerController : MonoBehaviour
     private Rigidbody2D rb; // Reference to the Rigidbody component
     private bool isGrounded; // Whether the player is grounded
 
-    void Start()
+
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody component
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -41,6 +44,9 @@ public class P_PlayerController : MonoBehaviour
 
     void Jump()
     {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse); // Apply the jump force
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
     }
+
+    
 }
