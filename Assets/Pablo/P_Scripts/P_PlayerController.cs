@@ -50,13 +50,14 @@ public class P_PlayerController : MonoBehaviour
     {
         float moveInput = Input.GetAxis("Horizontal"); // Get input from arrow keys or A/D keys
         Vector3 move = new Vector3(moveInput * moveSpeed, rb.velocity.y, 0);
-
+       // Debug.Log (move);
+       // rb.AddForce(move,ForceMode2D.Impulse);
         rb.velocity = move; // Apply movement
 
-        // Clamp the player's position within the camera's view
-       // Vector3 clampedPosition = transform.position;
-       // clampedPosition.x = Mathf.Clamp(clampedPosition.x, GetCameraMinX(), GetCameraMaxX());
-       // transform.position = clampedPosition;
+       // Clamp the player's position within the camera's view
+       Vector3 clampedPosition = transform.position;
+       clampedPosition.x = Mathf.Clamp(clampedPosition.x, GetCameraMinX(), GetCameraMaxX());
+       transform.position = clampedPosition;
     }
 
     void Jump()
