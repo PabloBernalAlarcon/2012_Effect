@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5371259799271571563}
   - component: {fileID: 2683334389273645700}
   m_Layer: 7
-  m_Name: Square
+  m_Name: jumping enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

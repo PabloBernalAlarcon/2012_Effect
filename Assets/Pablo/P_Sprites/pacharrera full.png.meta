@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pacharrera full_0: -681817856476015295
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
