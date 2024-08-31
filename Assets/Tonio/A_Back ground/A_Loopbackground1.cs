@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class A_Loopbackground1 : MonoBehaviour
 {
-    [Range(-1f,1f)]
+    [Range(-10f,10f)]
     public float scrollSpeed = 0.5f;
     private float offset;
     private Material mat;
