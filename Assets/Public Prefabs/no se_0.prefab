@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5531469205171613649}
   m_Layer: 0
   m_Name: no se_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +148,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!60 &148514880302023161
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -217,6 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 20
   groundCheck: {fileID: 9086628997930263131}
+  moveSpeed: 5
   groundDistance: 0.1
   groundMask:
     serializedVersion: 2

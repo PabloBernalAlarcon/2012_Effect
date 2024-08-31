@@ -4942,6 +4942,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -5
   groundTag: Floor
+  lifeSpan: 5
 --- !u!50 &1010005829454643594
 Rigidbody2D:
   serializedVersion: 4
