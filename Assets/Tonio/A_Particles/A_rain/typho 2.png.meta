@@ -157,7 +157,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      typho 2_0: -3568851642436745731
+      typho 2_1: 5573595772154187239
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

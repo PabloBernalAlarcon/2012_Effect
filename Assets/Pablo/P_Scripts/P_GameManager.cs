@@ -14,6 +14,10 @@ public class P_GameManager : MonoBehaviour
     // Define an event of the delegate type
     public static event PlayerCollisionHandler OnPlayerEnemyCollision;
 
+    public delegate void GodTriggerWarning();
+
+    public static event GodTriggerWarning OnGodTriggerWarning;
+
    
     // Called when the script instance is being loaded
     private void Awake()
@@ -31,12 +35,18 @@ public class P_GameManager : MonoBehaviour
     }
 
     // Example of a variable or a game state
-    public float playerScore = 0;
+    public float playerScore = 1;
 
     private void Update()
     {
         playerScore += Time.deltaTime;
         UIController.scoreText.text = ((int)playerScore).ToString();
+
+        if (((int)playerScore) % 10 == 0)
+        {         
+            GodWasTriggered();
+            playerScore++;           
+        }
     }
 
     // This method will be called when a collision is detected
@@ -45,6 +55,11 @@ public class P_GameManager : MonoBehaviour
         // Invoke the event
         OnPlayerEnemyCollision?.Invoke();
         Time.timeScale = 0;
+    }
+
+    public void GodWasTriggered()
+    {
+        OnGodTriggerWarning?.Invoke();
     }
 
 }

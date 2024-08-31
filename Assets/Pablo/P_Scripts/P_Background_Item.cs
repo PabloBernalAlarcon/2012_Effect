@@ -14,7 +14,7 @@ public class P_Background_Item : MonoBehaviour
     private void Start()
     {
         initialY =transform.position;
-        LowerBackground();
+       // LowerBackground();
     }
 
     public void LowerBackground()
@@ -25,12 +25,13 @@ public class P_Background_Item : MonoBehaviour
     IEnumerator lower()
     {
         float elapsedTime = 0;
+        transform.position = initialY;
 
         while (elapsedTime < duration)
         {
             transform.position = new Vector3(transform.position.x,
                 Vector3.Lerp(initialY, finalY, (elapsedTime / duration)).y,
-                transform.position.z);
+                initialY.z);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
@@ -48,7 +49,9 @@ public class P_Background_Item : MonoBehaviour
 
         while (elapsedTime < duration)
         {
-            transform.position = Vector3.Lerp(finalY, initialY, (elapsedTime / duration));
+            transform.position = new Vector3(transform.position.x,
+                Vector3.Lerp(finalY, initialY, (elapsedTime / duration)).y,
+                initialY.z);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
