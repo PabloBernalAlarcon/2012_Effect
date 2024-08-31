@@ -35,7 +35,7 @@ public class P_GameManager : MonoBehaviour
     }
 
     // Example of a variable or a game state
-    public float playerScore = 1;
+    public float playerScore = 0;
 
     private void Update()
     {
@@ -54,7 +54,7 @@ public class P_GameManager : MonoBehaviour
     {
         // Invoke the event
         OnPlayerEnemyCollision?.Invoke();
-        Time.timeScale = 0;
+      //  Time.timeScale = 0;
     }
 
     public void GodWasTriggered()
