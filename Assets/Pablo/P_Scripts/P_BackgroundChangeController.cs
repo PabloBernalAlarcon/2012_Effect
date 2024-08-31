@@ -3,14 +3,8 @@ using UnityEngine;
 public class P_BackgroundChangeController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    P_Background_Item BItems;
+   
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
