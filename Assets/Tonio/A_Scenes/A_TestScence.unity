@@ -263,6 +263,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 717697784483677773, guid: e91c180339c3886409778bd60aa7d786, type: 3}
+      propertyPath: scrollSpeed
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6284133838985512808, guid: e91c180339c3886409778bd60aa7d786, type: 3}
       propertyPath: m_Name
       value: Background
