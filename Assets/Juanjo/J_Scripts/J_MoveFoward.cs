@@ -53,8 +53,8 @@ public class MoveForward2D : MonoBehaviour
                 // Calculate the direction from the large sphere's center to the small sphere's center
                 Vector2 direction = (transform.position - largeSphere.transform.position).normalized;
 
-                // Calculate the sticking point on the surface of the large sphere
-                float largeRadius = largeSphere.GetComponent<CircleCollider2D>().radius*largeSphere.transform.localScale.x;
+            // Calculate the sticking point on the surface of the large sphere
+            float largeRadius = 44.5f;// largeSphere.GetComponent<Collider2D>().radius*largeSphere.transform.localScale.x;
                 Vector2 stickingPoint = (Vector2)largeSphere.transform.position + direction * largeRadius;
 
                 // Position the small sphere on the surface and make it a child of the large sphere
@@ -69,6 +69,7 @@ public class MoveForward2D : MonoBehaviour
             StartCoroutine(moristes());
             
         }
+         
 
         
     }

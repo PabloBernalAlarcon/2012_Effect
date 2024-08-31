@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      black agua ju_0: 4496835668465748100
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

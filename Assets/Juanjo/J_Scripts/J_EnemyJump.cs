@@ -32,14 +32,25 @@ public class J_EnemyJump : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Hacer que el objeto salte si está en el suelo
-        if (Random.Range(1,1000) > 980)
-        {
-            Jump();
-        }
+       // if (Random.Range(1,1000) > 996)
+       // {
+       //     Jump();
+       // }
 
         // Mantener la orientación del objeto sobre el suelo mientras está en el aire
         if (!isGrounded)
         {
+            RotateAroundGround();
+        }
+
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+          if (collision.gameObject.name == "Meteorito(Clone)")
+        {
+            Jump();
             RotateAroundGround();
         }
     }

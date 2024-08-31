@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nub2.0 ray1_0: 1436505195107445139
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
