@@ -4960,6 +4960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 25054418}
+  - component: {fileID: 25054419}
   m_Layer: 0
   m_Name: Background Huricane
   m_TagString: Untagged
@@ -4983,6 +4984,20 @@ Transform:
   - {fileID: 319999243}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &25054419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25054417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 25054417}
+  NewBackground: {fileID: 1494051177}
 --- !u!1 &303873011
 GameObject:
   m_ObjectHideFlags: 0
@@ -19491,6 +19506,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 667111062}
+  - component: {fileID: 667111063}
   m_Layer: 0
   m_Name: Background Snow storm
   m_TagString: Untagged
@@ -19514,6 +19530,20 @@ Transform:
   - {fileID: 1739374648}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &667111063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667111061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 667111061}
+  NewBackground: {fileID: 1420335125}
 --- !u!1 &698907509
 GameObject:
   m_ObjectHideFlags: 0
@@ -29513,6 +29543,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1032726720}
+  - component: {fileID: 1032726721}
   m_Layer: 0
   m_Name: Background Typhoon
   m_TagString: Untagged
@@ -29536,6 +29567,20 @@ Transform:
   - {fileID: 24565689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032726721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032726719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1032726719}
+  NewBackground: {fileID: 25054417}
 --- !u!1 &1113795933
 GameObject:
   m_ObjectHideFlags: 0
@@ -29545,6 +29590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1113795934}
+  - component: {fileID: 1113795935}
   m_Layer: 0
   m_Name: Background Flood
   m_TagString: Untagged
@@ -29568,6 +29614,20 @@ Transform:
   - {fileID: 962820248}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1113795935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113795933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1113795933}
+  NewBackground: {fileID: 1137700985}
 --- !u!1 &1133475129
 GameObject:
   m_ObjectHideFlags: 0
@@ -34410,6 +34470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1137700986}
+  - component: {fileID: 1137700987}
   m_Layer: 0
   m_Name: Background Tsuanmi
   m_TagString: Untagged
@@ -34433,6 +34494,20 @@ Transform:
   - {fileID: 1734299850}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1137700987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137700985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1137700985}
+  NewBackground: {fileID: 1669821836}
 --- !u!1 &1225558689
 GameObject:
   m_ObjectHideFlags: 0
@@ -39420,10 +39495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4327fa676ee3ab46a011702376ce7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgrounds:
-  - {fileID: 0}
-  spriteRenderer: {fileID: 0}
-  currentIndex: 0
 --- !u!114 &1292025761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39447,6 +39518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1420335126}
+  - component: {fileID: 1420335127}
   m_Layer: 0
   m_Name: Background Thunder Storm
   m_TagString: Untagged
@@ -39470,6 +39542,20 @@ Transform:
   - {fileID: 805153252}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1420335127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420335125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1420335125}
+  NewBackground: {fileID: 1717363606}
 --- !u!1 &1494051177
 GameObject:
   m_ObjectHideFlags: 0
@@ -39479,6 +39565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1494051178}
+  - component: {fileID: 1494051179}
   m_Layer: 0
   m_Name: Background Earthquate
   m_TagString: Untagged
@@ -39501,6 +39588,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494051179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494051177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1494051177}
+  NewBackground: {fileID: 1113795933}
 --- !u!1 &1669821836
 GameObject:
   m_ObjectHideFlags: 0
@@ -39510,6 +39611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1669821837}
+  - component: {fileID: 1669821838}
   m_Layer: 0
   m_Name: Background Ice age
   m_TagString: Untagged
@@ -39533,6 +39635,20 @@ Transform:
   - {fileID: 457969620}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669821838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669821836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1669821836}
+  NewBackground: {fileID: 1719640401}
 --- !u!1 &1717363606
 GameObject:
   m_ObjectHideFlags: 0
@@ -39542,6 +39658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1717363607}
+  - component: {fileID: 1717363608}
   m_Layer: 0
   m_Name: Background Wildfier
   m_TagString: Untagged
@@ -39566,6 +39683,20 @@ Transform:
   - {fileID: 1012090020}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1717363608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717363606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1717363606}
+  NewBackground: {fileID: 1032726719}
 --- !u!1 &1719640401
 GameObject:
   m_ObjectHideFlags: 0
@@ -44527,6 +44658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778732976}
+  - component: {fileID: 1778732977}
   m_Layer: 0
   m_Name: Background dessert
   m_TagString: Untagged
@@ -44550,6 +44682,20 @@ Transform:
   - {fileID: 833708048}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1778732977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778732975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1778732975}
+  NewBackground: {fileID: 1799639298}
 --- !u!1 &1799639298
 GameObject:
   m_ObjectHideFlags: 0
@@ -44559,6 +44705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799639299}
+  - component: {fileID: 1799639300}
   m_Layer: 0
   m_Name: Background Sand storm
   m_TagString: Untagged
@@ -44582,6 +44729,20 @@ Transform:
   - {fileID: 1225558692}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1799639300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799639298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8642ac931df031b41be39b010e43c3b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1799639298}
+  NewBackground: {fileID: 667111061}
 --- !u!1 &2055019210
 GameObject:
   m_ObjectHideFlags: 0
