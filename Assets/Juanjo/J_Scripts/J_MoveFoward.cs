@@ -4,6 +4,11 @@ public class MoveForward2D : MonoBehaviour
 {
     public float speed = 5f; // Velocidad del movimiento
     private bool isMoving = true; // Controla si el objeto sigue moviéndose
+    public string groundTag = "Ground"; // Tag del objeto que se considera como suelo
+    
+
+   
+   
 
     void Update()
     {
@@ -14,9 +19,15 @@ public class MoveForward2D : MonoBehaviour
         }
     }
 
-    // Detener el movimiento al entrar en contacto con otro objeto
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
-        isMoving = false;
+        if (collision.gameObject.CompareTag(groundTag))
+        {
+            GetComponent<Rigidbody2D>().freezeRotation = true;
+            speed = 0;
+
+           
+        }
     }
 }
