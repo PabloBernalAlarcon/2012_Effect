@@ -10,7 +10,7 @@ public class J_EnemyJump : MonoBehaviour
     public LayerMask groundLayer; // Capa que representa el suelo
 
     private Rigidbody2D rb; // Referencia al componente Rigidbody2D
-    private bool isGrounded; // Indica si el objeto está en el suelo
+    private bool isGrounded = true; // Indica si el objeto está en el suelo
     public float lifeSpan;
 
 
@@ -32,7 +32,7 @@ public class J_EnemyJump : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
         // Hacer que el objeto salte si está en el suelo
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (Random.Range(1,1000) > 980)
         {
             Jump();
         }

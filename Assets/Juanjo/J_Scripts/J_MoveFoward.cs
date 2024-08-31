@@ -44,7 +44,7 @@ public class MoveForward2D : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
        
-           // GetComponent<Rigidbody2D>().freezeRotation = true;
+            GetComponent<Rigidbody2D>().freezeRotation = true;
 
             if (collision.gameObject.CompareTag(groundTag) && !isStuck)
             {
@@ -70,11 +70,7 @@ public class MoveForward2D : MonoBehaviour
             
         }
 
-        if (collision.gameObject.tag == "Player")
-        {
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
-        }
+        
     }
 
   
