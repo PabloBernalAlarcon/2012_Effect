@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Dinosaurs_Jurassic_Park_439031_0: 1670470555654512754
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

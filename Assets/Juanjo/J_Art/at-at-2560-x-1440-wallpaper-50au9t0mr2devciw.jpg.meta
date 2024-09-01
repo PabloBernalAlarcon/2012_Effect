@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      at-at-2560-x-1440-wallpaper-50au9t0mr2devciw_0: -8867447853981829631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
