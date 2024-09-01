@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SpawnerManager2D : MonoBehaviour
 {
@@ -14,13 +15,24 @@ public class SpawnerManager2D : MonoBehaviour
     public float checkInterval = 1f; // Intervalo de tiempo entre cada verificación de spawn
     public float multipleSpawnProbability = 0.2f; // Probabilidad de que se activen múltiples spawners
 
+    private Coroutine spawnCoroutine;
+
     private void Start()
     {
         // Normalizar las probabilidades para que sumen 1
         NormalizeProbabilities();
 
         // Iniciar el proceso de verificación de spawns
-        InvokeRepeating("CheckForSpawn", checkInterval, checkInterval);
+        spawnCoroutine = StartCoroutine(SpawnRoutine());
+    }
+
+    private void OnDisable()
+    {
+        // Detener la rutina de spawn si el objeto es desactivado
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+        }
     }
 
     void NormalizeProbabilities()
@@ -40,6 +52,18 @@ public class SpawnerManager2D : MonoBehaviour
             spawnerData.spawnProbability /= totalProbability;
             cumulative += spawnerData.spawnProbability;
             spawnerData.cumulativeProbability = cumulative;
+        }
+    }
+
+    private IEnumerator SpawnRoutine()
+    {
+        while (true)
+        {
+            // Realizar la verificación de spawns
+            CheckForSpawn();
+
+            // Esperar hasta el próximo intervalo de spawn, que puede cambiar dinámicamente
+            yield return new WaitForSeconds(checkInterval);
         }
     }
 
