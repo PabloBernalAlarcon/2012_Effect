@@ -4,14 +4,21 @@ public class P_BackgroundChangeController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField]
-    P_Background_Item[] BItems;
+    public P_Background_Item[] BItems;
 
     int currentBack = 0;
+
+    // Define the delegate type
+    public delegate void BGChangeHandler();
+
+    // Define an event of the delegate type
+    public static event BGChangeHandler OnBGSequenceOver;
 
     private void OnEnable()
     {
         // Subscribe to the event
         P_GameManager.OnGodTriggerWarning += triggerBackChange;
+       
     }
 
     private void OnDisable()
@@ -25,12 +32,8 @@ public class P_BackgroundChangeController : MonoBehaviour
     {
         if (currentBack >= BItems.Length)
         {
-            for (int i = 0;i < BItems.Length; i++)
-            {
-                BItems[i].RaiseBackGround();
-            }
-
-            currentBack = 0;
+            BackgroundIsOver();
+          
         }
         else
         {
@@ -40,6 +43,25 @@ public class P_BackgroundChangeController : MonoBehaviour
 
 
       
+    }
+
+    public void AllRaise()
+    {
+        currentBack = 0;
+        for (int i = 0; i < BItems.Length; i++)
+        {
+            BItems[i].RaiseBackGround();
+        }
+
+    }
+
+    public void BackgroundIsOver()
+    {
+       
+        OnBGSequenceOver?.Invoke();
+       //this.gameObject.SetActive(false);
+       
+
     }
 
 

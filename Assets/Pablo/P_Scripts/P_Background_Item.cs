@@ -17,6 +17,7 @@ public class P_Background_Item : MonoBehaviour
     private void Start()
     {
         initialY =transform.position;
+        initialY.y = 1;
         mr = GetComponent<MeshRenderer>();
        // LowerBackground();
     }
