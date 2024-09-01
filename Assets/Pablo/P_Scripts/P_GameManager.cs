@@ -42,7 +42,7 @@ public class P_GameManager : MonoBehaviour
         playerScore += Time.deltaTime;
         UIController.scoreText.text = ((int)playerScore).ToString();
 
-        if (((int)playerScore) % 10 == 0)
+        if (((int)playerScore) % 5 == 0)
         {         
             GodWasTriggered();
             playerScore++;           

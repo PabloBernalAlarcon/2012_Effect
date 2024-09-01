@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 041134a319d309b4b81e01ce2da9abd3
+guid: 9d3b1e99477848445a24e300cbe4b156
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1447816984446444122
-    second: fuegito2_0
+      213: 5218823490559287709
+    second: Image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fuegito2_0
+      name: Image_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 31
-        height: 26
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5225b160eda71410800000000000000
-      internalID: 1447816984446444122
+      spriteID: d91204c605cfc6840800000000000000
+      internalID: 5218823490559287709
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      fuegito2_0: 1447816984446444122
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
