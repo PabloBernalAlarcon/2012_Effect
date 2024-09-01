@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b74fb4d3d37ae3c4b89d184f6f84dc71
+guid: e23fe0303ce103d4face471812da71d6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8097794296284381399
-    second: qure ya la quisiera yo 1_0
+      213: 1488371403656904347
+    second: Modopix 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: qure ya la quisiera yo 1_0
+      name: Modopix 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 4320
-        height: 2160
+        height: 1415
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92ff8c1ddfade9f80800000000000000
-      internalID: -8097794296284381399
+      spriteID: b9eb1d8e7e1c7a410800000000000000
+      internalID: 1488371403656904347
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      qure ya la quisiera yo 1_0: -8097794296284381399
+      Modopix 1_0: 1488371403656904347
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
