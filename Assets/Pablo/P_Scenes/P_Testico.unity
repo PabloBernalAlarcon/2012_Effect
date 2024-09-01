@@ -238,6 +238,52 @@ MonoBehaviour:
   lineEnd: {x: 7.97, y: 5.37}
   spawnInterval: 1
   papi: {fileID: 1399972292}
+--- !u!1 &255258891
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255258892}
+  - component: {fileID: 255258893}
+  m_Layer: 0
+  m_Name: place
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &255258892
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255258891}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8266468, y: 3.0673554, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1129629827}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &255258893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255258891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffd75feae700914da3e33a92a4c1f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 5
+  finalY: {x: 0, y: 0, z: 0}
 --- !u!1 &308537382 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2189693513920656841, guid: 885fea535399e2146a1679ce555b04e7, type: 3}
@@ -417,12 +463,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2095648203}
     m_Modifications:
     - target: {fileID: 2136484862614189089, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136484862614189089, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2136484862614189089, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.27
       objectReference: {fileID: 0}
     - target: {fileID: 2136484862614189089, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -434,7 +484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2465105531815647316, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 2465105531815647316, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -515,6 +565,10 @@ PrefabInstance:
     - target: {fileID: 8787295800249502255, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8787295800249502255, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1315,7 +1369,7 @@ MonoBehaviour:
   - spawner: {fileID: 1005323770}
     spawnProbability: 0.1
     cumulativeProbability: 0
-  checkInterval: 1
+  checkInterval: 0.7
   multipleSpawnProbability: 0.2
 --- !u!4 &791296263
 Transform:
@@ -1773,6 +1827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BItems:
+  - {fileID: 255258893}
   - {fileID: 2003249102}
   - {fileID: 320222630}
   - {fileID: 1801077588}
@@ -2660,7 +2715,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6425537799582761017, guid: e91c180339c3886409778bd60aa7d786, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 255258892}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6284133838985512808, guid: e91c180339c3886409778bd60aa7d786, type: 3}
       insertIndex: -1
@@ -3219,6 +3277,7 @@ GameObject:
   - component: {fileID: 2085030082}
   - component: {fileID: 2085030087}
   - component: {fileID: 2085030088}
+  - component: {fileID: 2085030089}
   m_Layer: 3
   m_Name: mayan wheel_0
   m_TagString: Floor
@@ -5604,6 +5663,18 @@ PolygonCollider2D:
       - {x: -0.125, y: 3.085}
       - {x: -0.114999995, y: 3.085}
   m_UseDelaunayMesh: 0
+--- !u!210 &2085030089
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085030081}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_SortAtRoot: 0
 --- !u!1 &2093027172 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4455396356155126593, guid: 0546d1fadd8a59e46b9e926846e24968, type: 3}
