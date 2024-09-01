@@ -328,8 +328,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1719640401 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4526556278448889047, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
-  m_PrefabInstance: {fileID: 5780378664508386968}
+  m_CorrespondingSourceObject: {fileID: 5297349225757817465, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+  m_PrefabInstance: {fileID: 5216124191880712086}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1778732975 stripped
 GameObject:
@@ -907,7 +907,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9947ca2e2b1c7564c816a19128793cd4, type: 3}
---- !u!1001 &5780378664508386968
+--- !u!1001 &5216124191880712086
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -915,53 +915,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4526556278448889047, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
-      propertyPath: m_Name
-      value: Background Virus?
-      objectReference: {fileID: 0}
-    - target: {fileID: 4526556278448889047, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.209927
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.0105176
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 10.081326
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5211982144494549401, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+    - target: {fileID: 4541554611306635063, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5297349225757817465, guid: cf03ee799bcb2984b87226cfa565f62a, type: 3}
+      propertyPath: m_Name
+      value: Background Virus?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1251,5 +1247,5 @@ SceneRoots:
   - {fileID: 4208368912133876744}
   - {fileID: 8362767942106833275}
   - {fileID: 7732078313903594375}
-  - {fileID: 5780378664508386968}
+  - {fileID: 5216124191880712086}
   - {fileID: 182912312744799083}
