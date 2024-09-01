@@ -30,6 +30,7 @@ public class P_GodController : MonoBehaviour
     IEnumerator rage()
     {
         anim.SetBool("rage",true);
+        GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(3);
         anim.SetBool("rage", false);
     }

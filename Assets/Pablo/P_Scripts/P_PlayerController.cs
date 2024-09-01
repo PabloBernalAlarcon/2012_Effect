@@ -31,30 +31,30 @@ public class P_PlayerController : MonoBehaviour
     {
        
         MovePlayer();
-        CheckGrounded();
+        //CheckGrounded();
 
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
-        {
-            StartJump(); // Start the jump
-        }
-        if (Input.GetKey(KeyCode.Space) && isJumping)
-        {
-            ContinueJump(); // Continue jumping while the button is held
-        }
+        //if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    StartJump(); // Start the jump
+        //}
+        //if (Input.GetKey(KeyCode.Space) && isJumping)
+        //{
+        //    ContinueJump(); // Continue jumping while the button is held
+        //}
+        //
+        //if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    EndJump(); // End the jump when the button is released
+        //}
 
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
-            EndJump(); // End the jump when the button is released
+            if (CheckGrounded())
+            {
+            Jump(); // Execute the jump
+                anim.SetTrigger("jump");
+            }
         }
-
-       // if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
-       // {
-       //     if (CheckGrounded())
-       //     {
-       //     Jump(); // Execute the jump
-       //         anim.SetTrigger("jump");
-       //     }
-       // }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -95,7 +95,7 @@ public class P_PlayerController : MonoBehaviour
     void Jump()
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
+        GetComponent<AudioSource>().Play();
     }
 
     void StartJump()

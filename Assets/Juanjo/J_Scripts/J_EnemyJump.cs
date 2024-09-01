@@ -76,6 +76,7 @@ public class J_EnemyJump : MonoBehaviour
 
     void Jump()
     {
+        GetComponent<AudioSource>().Play();
         // Aplicar una fuerza hacia arriba para hacer que el objeto salte
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }

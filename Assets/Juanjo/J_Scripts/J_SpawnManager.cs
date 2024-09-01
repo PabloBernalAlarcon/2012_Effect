@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using static UnityEditor.Progress;
 
 public class SpawnerManager2D : MonoBehaviour
 {
@@ -17,6 +18,33 @@ public class SpawnerManager2D : MonoBehaviour
 
     private Coroutine spawnCoroutine;
 
+    private void OnEnable()
+    {
+        // Subscribe to the event
+        P_BackgroundChangeController.OnBGSequenceOver += triggerDifficulty;
+
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from the event
+        P_GameManager.OnGodTriggerWarning -= triggerDifficulty;
+
+        // Detener la rutina de spawn si el objeto es desactivado
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+        }
+    }
+
+    // This method will be called when the event is triggered
+    private void triggerDifficulty()
+    {
+        checkInterval -= 0.2f;
+        multipleSpawnProbability += 0.1f;
+
+    }
+
     private void Start()
     {
         // Normalizar las probabilidades para que sumen 1
@@ -26,14 +54,7 @@ public class SpawnerManager2D : MonoBehaviour
         spawnCoroutine = StartCoroutine(SpawnRoutine());
     }
 
-    private void OnDisable()
-    {
-        // Detener la rutina de spawn si el objeto es desactivado
-        if (spawnCoroutine != null)
-        {
-            StopCoroutine(spawnCoroutine);
-        }
-    }
+   
 
     void NormalizeProbabilities()
     {
