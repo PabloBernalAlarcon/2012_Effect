@@ -257,6 +257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   finalY: {x: 0, y: -14, z: 9}
+  materials:
+  - {fileID: 2100000, guid: 37537627a3321374098f0263825e40ae, type: 2}
+  - {fileID: 2100000, guid: 37537627a3321374098f0263825e40ae, type: 2}
 --- !u!1 &323398066
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +874,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   finalY: {x: 0, y: -13, z: 10}
+  materials:
+  - {fileID: 2100000, guid: c5e1e7f98143fea499beb6af1b6a35ca, type: 2}
+  - {fileID: 2100000, guid: 949dafb6e01fc414797aeb0a932d2095, type: 2}
+  - {fileID: 2100000, guid: 33856d61574d32847a7d9d56975e21e1, type: 2}
+  - {fileID: 2100000, guid: ce41e0b13e54ff6488a29cac66422e00, type: 2}
 --- !u!4 &755119393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 838781556194689775, guid: 03c6a9b335d7eca46b8c3b88a88122e7, type: 3}
@@ -895,6 +903,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   finalY: {x: 0, y: -14, z: 3}
+  materials:
+  - {fileID: 2100000, guid: 0c0acc54b4cd7fb48b9a5d57c8b3a9f1, type: 2}
+  - {fileID: 2100000, guid: 0c0acc54b4cd7fb48b9a5d57c8b3a9f1, type: 2}
 --- !u!1 &791296261
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +945,7 @@ MonoBehaviour:
   - spawner: {fileID: 1005323770}
     spawnProbability: 0.1
     cumulativeProbability: 0
-  checkInterval: 2
+  checkInterval: 3
   multipleSpawnProbability: 0.2
 --- !u!4 &791296263
 Transform:
@@ -1536,6 +1547,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   finalY: {x: 0, y: -14, z: 6}
+  materials:
+  - {fileID: 2100000, guid: 4f914939504b0a54ebd27b6a9a69346d, type: 2}
+  - {fileID: 2100000, guid: 2e2d863ccc604bf43acdcf49568ffad4, type: 2}
+  - {fileID: 2100000, guid: 936b223051400be4ea0086f79e6baa27, type: 2}
 --- !u!1001 &1828758830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1584,6 +1599,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: sky
       objectReference: {fileID: 0}
+    - target: {fileID: 5271998167390933032, guid: e91c180339c3886409778bd60aa7d786, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5271998167390933032, guid: e91c180339c3886409778bd60aa7d786, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 936b223051400be4ea0086f79e6baa27, type: 2}
+    - target: {fileID: 5271998167390933032, guid: e91c180339c3886409778bd60aa7d786, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e2d863ccc604bf43acdcf49568ffad4, type: 2}
     - target: {fileID: 5300225705086796523, guid: e91c180339c3886409778bd60aa7d786, type: 3}
       propertyPath: m_Name
       value: cluds
@@ -1947,6 +1974,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   finalY: {x: 0, y: -14, z: 8}
+  materials:
+  - {fileID: 2100000, guid: b1371fb201e654e44b926a45e1700f52, type: 2}
+  - {fileID: 2100000, guid: 936b223051400be4ea0086f79e6baa27, type: 2}
+  - {fileID: 2100000, guid: 2e2d863ccc604bf43acdcf49568ffad4, type: 2}
 --- !u!1 &2059871951 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8473453315574397904, guid: fabb8c915f678554087d8b5a33f08d16, type: 3}
@@ -4617,7 +4648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8473453315574397904, guid: fabb8c915f678554087d8b5a33f08d16, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8473453315574397904, guid: fabb8c915f678554087d8b5a33f08d16, type: 3}
       propertyPath: m_TagString

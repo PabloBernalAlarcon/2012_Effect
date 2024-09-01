@@ -132,7 +132,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fuegito2_0: 1447816984446444122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

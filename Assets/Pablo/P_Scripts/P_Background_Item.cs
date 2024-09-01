@@ -11,9 +11,13 @@ public class P_Background_Item : MonoBehaviour
     [SerializeField]
     Vector3 finalY;
 
+    MeshRenderer mr;
+
+
     private void Start()
     {
         initialY =transform.position;
+        mr = GetComponent<MeshRenderer>();
        // LowerBackground();
     }
 
@@ -36,6 +40,7 @@ public class P_Background_Item : MonoBehaviour
             yield return null;
         }
         transform.position = finalY;
+
     }
 
     public void RaiseBackGround()
@@ -45,6 +50,9 @@ public class P_Background_Item : MonoBehaviour
 
     IEnumerator raise()
     {
+
+
+       
         float elapsedTime = 0;
 
         while (elapsedTime < duration)
