@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class J_PlayerControllerExperiment : MonoBehaviour
 {
-    public float minJumpForce = 2f; // Fuerza mínima del salto
-    public float maxJumpForce = 10f; // Fuerza máxima del salto
-    public float maxHoldTime = 1f; // Tiempo máximo que se puede mantener presionada la tecla para aumentar la fuerza del salto
+    public float initialJumpForce = 5f; // Fuerza inicial aplicada al salto
+    public float maxHoldTime = 0.5f; // Tiempo máximo que se puede mantener presionada la tecla para aumentar el salto
+    public float holdForce = 2f; // Fuerza adicional aplicada mientras se mantiene presionada la tecla
     public Transform groundCheck; // Referencia al GameObject hijo utilizado para verificar si está en el suelo
     public float moveSpeed = 5f; // Velocidad del movimiento horizontal
     public float groundDistance = 0.1f; // Distancia para verificar el suelo
@@ -14,8 +14,8 @@ public class J_PlayerControllerExperiment : MonoBehaviour
     private bool isGrounded; // Si el jugador está en el suelo
     private Camera mainCamera; // Referencia a la cámara principal
     private Animator anim;
-    private float jumpHoldTime; // Tiempo que se ha mantenido presionada la tecla de salto
     private bool isJumping; // Si el jugador está en el proceso de salto
+    private float jumpTimeCounter; // Tiempo que se ha mantenido presionada la tecla de salto
 
     private void Start()
     {
@@ -32,20 +32,24 @@ public class J_PlayerControllerExperiment : MonoBehaviour
         {
             // Iniciar el salto
             isJumping = true;
-            jumpHoldTime = 0f;
+            jumpTimeCounter = 0f;
+            rb.velocity = new Vector2(rb.velocity.x, initialJumpForce); // Aplicar la fuerza inicial de salto
             anim.SetTrigger("jump");
         }
 
         if (Input.GetKey(KeyCode.Space) && isJumping)
         {
-            // Aumentar el tiempo de mantención de la tecla mientras se mantiene presionada
-            jumpHoldTime += Time.deltaTime;
+            // Aplicar fuerza adicional mientras se mantenga presionada la tecla y no se haya superado el tiempo máximo
+            if (jumpTimeCounter < maxHoldTime)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + holdForce * Time.deltaTime);
+                jumpTimeCounter += Time.deltaTime;
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && isJumping)
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            // Ejecutar el salto con una fuerza proporcional al tiempo que se mantuvo presionada la tecla
-            Jump();
+            // Terminar el proceso de salto cuando se suelta la tecla
             isJumping = false;
         }
     }
@@ -81,13 +85,6 @@ public class J_PlayerControllerExperiment : MonoBehaviour
         Vector3 clampedPosition = transform.position;
         clampedPosition.x = Mathf.Clamp(clampedPosition.x, GetCameraMinX(), GetCameraMaxX());
         transform.position = clampedPosition;
-    }
-
-    void Jump()
-    {
-        // Calcular la fuerza del salto basada en el tiempo de mantención de la tecla de salto
-        float jumpForce = Mathf.Lerp(minJumpForce, maxJumpForce, jumpHoldTime / maxHoldTime);
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
     }
 
     float GetCameraMinX()
