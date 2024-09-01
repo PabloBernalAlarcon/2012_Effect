@@ -282,7 +282,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hurra2_0: 2361044169049752025
+      hurra2_1: -8655700167269532000
+      hurra2_2: 8665578399577988222
+      hurra2_3: -1315959476147524254
+      hurra2_4: -7093939119229660558
+      hurra2_5: -3746972425843449630
+      hurra2_6: 9058139289750548852
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

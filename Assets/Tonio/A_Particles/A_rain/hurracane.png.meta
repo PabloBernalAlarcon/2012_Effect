@@ -307,7 +307,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hurracane_0: 3516996109165753487
+      hurracane_1: 4783233450774888623
+      hurracane_2: -6385374459430119334
+      hurracane_3: -1412614847845886900
+      hurracane_4: 6939008275345447433
+      hurracane_5: -3996964069829206157
+      hurracane_6: -8978421022363806942
+      hurracane_7: -895986934857941995
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
