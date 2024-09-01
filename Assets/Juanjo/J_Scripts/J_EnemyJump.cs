@@ -14,6 +14,25 @@ public class J_EnemyJump : MonoBehaviour
     public float lifeSpan;
 
 
+    private void OnEnable()
+    {
+        // Subscribe to the event
+        P_GameManager.OnGodTriggerWarning += HandlegODNAGRY;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe from the event
+        P_GameManager.OnGodTriggerWarning -= HandlegODNAGRY;
+    }
+
+    // This method will be called when the event is triggered
+    private void HandlegODNAGRY()
+    {
+        if (Random.Range(1,100) > 40)
+             Jump();
+    }
+
     IEnumerator moristes()
     {
         yield return new WaitForSeconds(lifeSpan);
