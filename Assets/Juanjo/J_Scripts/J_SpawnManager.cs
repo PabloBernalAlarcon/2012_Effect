@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using static UnityEditor.Progress;
+//using static UnityEditor.Progress;
 
 public class SpawnerManager2D : MonoBehaviour
 {
