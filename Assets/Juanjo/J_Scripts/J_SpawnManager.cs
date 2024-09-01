@@ -8,8 +8,7 @@ public class SpawnerManager2D : MonoBehaviour
     public class SpawnerData
     {
         public Spawner2D spawner; // El spawner asociado
-        public float spawnProbability; // Probabilidad de que este spawner genere algo
-        [HideInInspector] public float cumulativeProbability; // Probabilidad acumulada, utilizada para el cálculo
+        [Range(0f, 1f)] public float spawnProbability = 0.5f; // Probabilidad de que este spawner genere algo
     }
 
     public SpawnerData[] spawners; // Lista de spawners con sus probabilidades
@@ -47,34 +46,11 @@ public class SpawnerManager2D : MonoBehaviour
 
     private void Start()
     {
-        // Normalizar las probabilidades para que sumen 1
-        NormalizeProbabilities();
-
         // Iniciar el proceso de verificación de spawns
         spawnCoroutine = StartCoroutine(SpawnRoutine());
     }
 
    
-
-    void NormalizeProbabilities()
-    {
-        float totalProbability = 0f;
-
-        // Sumar todas las probabilidades
-        foreach (SpawnerData spawnerData in spawners)
-        {
-            totalProbability += spawnerData.spawnProbability;
-        }
-
-        // Normalizar y calcular la probabilidad acumulada para cada spawner
-        float cumulative = 0f;
-        foreach (SpawnerData spawnerData in spawners)
-        {
-            spawnerData.spawnProbability /= totalProbability;
-            cumulative += spawnerData.spawnProbability;
-            spawnerData.cumulativeProbability = cumulative;
-        }
-    }
 
     private IEnumerator SpawnRoutine()
     {
@@ -113,7 +89,7 @@ public class SpawnerManager2D : MonoBehaviour
         // Determinar cuál spawner debe activarse según el valor aleatorio
         foreach (SpawnerData spawnerData in spawners)
         {
-            if (randomValue <= spawnerData.cumulativeProbability)
+            if (randomValue <= spawnerData.spawnProbability)
             {
                 spawnerData.spawner.Spawn();
                 break;
@@ -132,6 +108,15 @@ public class SpawnerManager2D : MonoBehaviour
             {
                 spawnerData.spawner.Spawn();
             }
+        }
+    }
+
+    // Método para actualizar la probabilidad de spawn de un spawner específico
+    public void UpdateSpawnProbability(int spawnerIndex, float newProbability)
+    {
+        if (spawnerIndex >= 0 && spawnerIndex < spawners.Length)
+        {
+            spawners[spawnerIndex].spawnProbability = newProbability;
         }
     }
 }
