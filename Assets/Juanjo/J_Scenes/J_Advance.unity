@@ -547,8 +547,6 @@ MonoBehaviour:
   cameraTransform: {fileID: 519420032}
   shakeDuration: 0.5
   shakeMagnitude: 0.5
-  checkInterval: 1
-  shakeProbability: 0.3
 --- !u!4 &552173985 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4912133397236165200, guid: 8f14cf51cd149bc45a56043afd9de4ac, type: 3}
@@ -1458,9 +1456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39dc70585049e12468f01f6038693f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minJumpForce: 15
-  maxJumpForce: 20
+  initialJumpForce: 15
   maxHoldTime: 0.5
+  holdForce: 20
   groundCheck: {fileID: 344671163}
   moveSpeed: 5
   groundDistance: 0.1
