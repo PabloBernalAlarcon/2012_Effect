@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 42c2534ab9458fd48995b6e4da91ac12
+guid: 8f2b0c2aa90b58148aedfb613f25b0af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2108773402590615001
-    second: pacharrera final form sin brazos akakak ke nub_0
+      213: 6867757490783751087
+    second: AAAAA_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,9 +40,9 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pacharrera final form sin brazos akakak ke nub_0
+      name: AAAAA_0
       rect:
         serializedVersion: 2
-        x: 1173
-        y: 115
-        width: 2671
-        height: 2821
+        x: 0
+        y: 0
+        width: 4320
+        height: 1415
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72a6bca53c12cb2e0800000000000000
-      internalID: -2108773402590615001
+      spriteID: fab81b90d0d2f4f50800000000000000
+      internalID: 6867757490783751087
       vertices: []
       indices: 
       edges: []
@@ -133,7 +133,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pacharrera final form sin brazos akakak ke nub_0: -2108773402590615001
+      AAAAA_0: 6867757490783751087
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
