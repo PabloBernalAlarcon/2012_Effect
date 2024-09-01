@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: "Assets/Juanjo/J_Scenes/J_MainMen\xFA.unity"
     guid: 7e528447eb9b33d48ae67152741436ad
   - enabled: 1
+    path: Assets/Juanjo/J_Scenes/J_Lore.unity
+    guid: 448ebfbc8759dfa4c9ff3653b390e0ff
+  - enabled: 1
     path: Assets/Pablo/P_Scenes/P_Testico.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects:
