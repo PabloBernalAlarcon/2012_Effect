@@ -5,6 +5,8 @@ public class P_PlayerController : MonoBehaviour
  
   
     public float jumpForce = 5f; // The force applied when jumping
+    public float maxJumpTime = 0.5f; // The maximum time the jump button can be held
+    public float jumpTimeFactor = 3f; // The factor to scale jump force while the button is held
     public Transform groundCheck; // Reference to the child GameObject used to check if grounded
     public float moveSpeed = 5f; // The speed of horizontal movement
     public float groundDistance = 0.1f; // Distance to check for ground
@@ -12,6 +14,8 @@ public class P_PlayerController : MonoBehaviour
 
     private Rigidbody2D rb; // Reference to the Rigidbody component
     private bool isGrounded; // Whether the player is grounded
+    private bool isJumping; // Whether the player is in the process of jumping
+    private float jumpTimeCounter;
     private Camera mainCamera; // Reference to the main camera
     private Animator anim;
 
@@ -27,15 +31,30 @@ public class P_PlayerController : MonoBehaviour
     {
        
         MovePlayer();
+        CheckGrounded();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            if (CheckGrounded())
-            {
-            Jump(); // Execute the jump
-                anim.SetTrigger("jump");
-            }
+            StartJump(); // Start the jump
         }
+        if (Input.GetKey(KeyCode.Space) && isJumping)
+        {
+            ContinueJump(); // Continue jumping while the button is held
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            EndJump(); // End the jump when the button is released
+        }
+
+       // if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+       // {
+       //     if (CheckGrounded())
+       //     {
+       //     Jump(); // Execute the jump
+       //         anim.SetTrigger("jump");
+       //     }
+       // }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -77,6 +96,31 @@ public class P_PlayerController : MonoBehaviour
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
+    }
+
+    void StartJump()
+    {
+        isJumping = true;
+        jumpTimeCounter = maxJumpTime;
+        rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse); // Apply the initial jump force
+    }
+
+    void ContinueJump()
+    {
+        if (jumpTimeCounter > 0)
+        {
+            rb.AddForce(Vector3.up * jumpForce * jumpTimeFactor * Time.deltaTime, ForceMode2D.Force); // Apply continuous force
+            jumpTimeCounter -= Time.deltaTime;
+        }
+        else
+        {
+            EndJump(); // Stop applying force if the max jump time is reached
+        }
+    }
+
+    void EndJump()
+    {
+        isJumping = false;
     }
 
     float GetCameraMinX()
