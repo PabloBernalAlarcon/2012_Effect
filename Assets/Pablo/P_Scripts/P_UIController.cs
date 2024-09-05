@@ -20,7 +20,19 @@ public class P_UIController : MonoBehaviour
         P_GameManager.OnPlayerEnemyCollision -= HandlePlayerEnemyCollision;
     }
 
+    private void Start()
+    {
+        P_GameManager.Instance.playerScore = 0;
+    }
+
+
+    private void Update()
+    {
+        scoreText.text = ((int)P_GameManager.Instance.playerScore).ToString();
+    }
     // This method will be called when the event is triggered
+
+   
     private void HandlePlayerEnemyCollision()
     {
         gameOverCanvas.SetActive(true);

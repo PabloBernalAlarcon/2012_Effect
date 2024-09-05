@@ -25,6 +25,7 @@ public class P_PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         mainCamera = Camera.main; // Get the main camera
+        P_GameManager.Instance.isAlive = true;
     }
 
     void Update()
